@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>班级管理</title>
+		<link rel="stylesheet" href="../css/css.css" />
+		<link rel="stylesheet" href="../css/Admin.css" />
+	</head>
+	<body>
+		<div class="A_app">
+			<p class="tit1">班级管理</p>
+			
+			<div class="card">
+				<h3>创建班级</h3>
+				<form method="POST">
+					<div class="form-group">
+						<label for="name">班级code <span style="color:red">*</span></label>
+						<input type="text" id="name" name="name" class="form-control" required="" placeholder="如:jsj24001">
+					</div>
+					
+					<div class="form-group">
+						<label for="name">班级名称 <span style="color:red">*</span></label>
+						<input type="text" id="name" name="name" class="form-control" required="" placeholder="如：计算机24001班">
+					</div>
+					
+					<div class="form-group">
+						<label for="academic_year">年级</label>
+						<input type="text" id="academic_year" name="academic_year" class="form-control" placeholder="如：2023">
+					</div>
+					
+					<button type="submit" class="btn btn-success">创建班级</button>
+				</form>
+			</div>
+			
+			<div class="card">
+				<h3>班级列表</h3>
+				<div id="List_BJ" class="tit3 list5">
+					<ul>
+						<li class="li_id">班级ID</li>
+						<li>班级名称</li>
+						<li>年级</li>
+						<li>修改</li>
+						<li>删除</li>
+						<!-- 使用标识 -->
+						<!-- 1-使用;2-暂停使用,;3-未启用, -->
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+</html>

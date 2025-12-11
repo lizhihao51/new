@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生管理</title>
+		<link rel="stylesheet" href="../css/css.css" />
+		<link rel="stylesheet" href="../css/Admin.css" />
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="A_app">
+			<p class="tit1">学生管理</p>
+			<div class="card">
+				<div class="card-header">
+					<h3>创建新学生</h3>
+				</div>
+
+				<form method="POST">
+					<input type="hidden" name="status" value="1">
+					<div class="form-group">
+						<label for="id">学生id <span style="color:red">*</span></label>
+						<input type="text" id="id" name="id" class="form-control" required="">
+					</div>
+					<div class="form-group">
+						<label for="name">学生姓名 <span style="color:red">*</span></label>
+						<input type="text" id="name" name="name" class="form-control" required="">
+					</div>
+					<div class="form-group">
+						<label for="name">学生学号 </label>
+						<input type="text" id="name" name="name" class="form-control" >
+					</div>
+					<div class="form-group">
+						<label for="class_id">所属班级 <span style="color:red">*</span></label>
+						<select id="class_id" name="class_id" class="form-control" required="">
+							<option value="">-- 请选择班级 --</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="tags">标签</label>
+						<input type="text" id="tags" name="tags" class="form-control" placeholder="多个标签用逗号分隔，如：团委,学生会">
+					</div>
+					<button type="submit" class="btn btn-success">创建学生</button>
+				</form>
+			</div>
+
+
+			
+			<div class="card">
+				<h3>学生列表</h3>
+				<form method="GET" id="filterForm">
+					<label for="filter_class">按班级筛选：</label>
+					<select id="filter_class" name="class_id" class="form-control"
+						onchange="document.getElementById('filterForm').submit()">
+						<option value="0">-- 所有班级 --</option>
+						php				                                    </select>
+						<a href="#" class="btn btn-secondary">清除筛选</a> 
+				</form>
+				
+				<div id="List_User" class="tit3 list7">
+					<ul>
+						<li>学生ID</li>
+						<li>姓名</li>
+						<li>班级</li>
+						<li>标签</li>
+						<li>备注</li>
+						<li>修改</li>
+						<li>删除</li>
+					</ul>
+				</div>
+				
+				
+			</div>
+
+
+		</div>
+
+
+	</body>
+</html>
