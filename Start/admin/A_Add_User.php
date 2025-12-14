@@ -1,7 +1,7 @@
 <?php
 // 更正相对路径
 $basePath = realpath(__DIR__ . '/../../');
-require_once $basePath . '/includes/header.php';
+require_once $basePath . '/config/header.php';
 
 $message = '';
 
@@ -81,29 +81,31 @@ try {
 			
 			<div class="card">
 				<h3>用户列表</h3>
-				<div id="List_User" class="tit3 list7">
-					<ul>
-						<li>用户ID</li>
-						<li>用户名</li>
-						<li>姓名</li>
-						<li>角色</li>
-						<li>状态</li>
-						<li>修改</li>
-						<li>删除</li>
-					</ul>
+				<table class="List_BJ">
+					<thead>
+						<tr>
+						<th>用户ID</th>
+						<th>用户名</th>
+						<th>姓名</th>
+						<th>角色</th>
+						<th>状态</th>
+						<th>修改</th>
+						<th>删除</th>
+						</tr>
+					</thead>
                     
                     <?php foreach ($users as $user): ?>
-                    <ul>
-                        <li><?php echo htmlspecialchars($user['u_id']); ?></li>
-                        <li><?php echo htmlspecialchars($user['username']); ?></li>
-                        <li><?php echo htmlspecialchars($user['name']); ?></li>
-                        <li><?php echo htmlspecialchars($user['role']); ?></li>
-                        <li><?php echo htmlspecialchars($user['user_status']); ?></li>
-                        <li><a href="#">修改</a></li>
-                        <li><a href="#">删除</a></li>
-                    </ul>
+                    <tbody>
+                        <td><?php echo htmlspecialchars($user['u_id']); ?></td>
+                        <td><?php echo htmlspecialchars($user['username']); ?></td>
+                        <td><?php echo htmlspecialchars($user['name']); ?></td>
+                        <td><?php echo htmlspecialchars($user['role']); ?></td>
+                        <td><?php echo htmlspecialchars($user['user_status']); ?></td>
+                        <td><a href="#">修改</a></td>
+                        <td><a href="#">删除</a></td>
+                    </tbody>
                     <?php endforeach; ?>
-				</div>
+				</table>
 			</div>
 			
 		</div>

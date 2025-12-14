@@ -1,6 +1,6 @@
 <?php
-$configPath = '../includes/config.php';
-require_once '../includes/header.php';
+// 引入header.php以使用验证函数
+require_once 'header.php';
 
 // 验证 Cookie 并获取用户ID
 $user = validate_user_cookie();
@@ -12,5 +12,5 @@ if ($user) {
 }
 
 // 退出后跳回登录页
-redirect('login.php');
+redirect('../login.php');
 ?>

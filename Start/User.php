@@ -1,5 +1,7 @@
 <?php
-require_once '../includes/header.php';
+// 更正相对路径
+$basePath = realpath(__DIR__ . '/../');
+require_once $basePath . '/config/header.php';
 
 // 检查是否已登录
 check_login();
@@ -15,7 +17,7 @@ check_login();
 <div id="top">
     <div id="user-info">
         欢迎, <?php echo htmlspecialchars($_SESSION['name']); ?>
-        <a href="../logout.php" id="logout-btn">安全退出</a>
+        <a href="../config/logout.php" id="logout-btn">安全退出</a>
     </div>
     <div class="tit">用户导航</div>
 </div>
@@ -23,21 +25,21 @@ check_login();
 <div id="box">
   <div id="left">
     <div class="Btn-cd">
-      <a href="user/U_Default.php" target="right-kuang">首页</a>
+      <a href="/Start/user/U_Default.php" target="right-kuang">首页</a>
     </div>
 
     <div class="Btn-cd">
-      <a href="user/U_my_tasks.php" target="right-kuang">我的任务</a>
+      <a href="/Start/user/U_my_tasks.php" target="right-kuang">我的任务</a>
     </div>
 	
     <div class="Btn-cd">
-      <a href="user/U_Edit.php" target="right-kuang">修改密码</a>
+      <a href="/Start/user/U_Edit.php" target="right-kuang">修改密码</a>
     </div>
   </div>
   
   <div id="right">
     <div id="main-bg">
-      <iframe id="right-kuang" src="user/U_Default.php" scrolling="auto" name="right-kuang"></iframe>
+      <iframe id="right-kuang" src="/Start/user/U_Default.php" scrolling="auto" name="right-kuang"></iframe>
     </div>
   </div>
 </div>

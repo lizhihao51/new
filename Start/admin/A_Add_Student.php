@@ -1,7 +1,7 @@
 <?php
 // 更正相对路径
 $basePath = realpath(__DIR__ . '/../../');
-require_once $basePath . '/includes/header.php';
+require_once $basePath . '/config/header.php';
 
 $message = '';
 
@@ -103,29 +103,33 @@ try {
 			<div class="card">
 				<h3>学生列表</h3>
 				
-				<div id="List_User" class="tit3 list7">
-					<ul>
-						<li>学生ID</li>
-						<li>姓名</li>
-						<li>班级</li>
-						<li>学号</li>
-						<li>标签</li>
-						<li>修改</li>
-						<li>删除</li>
-					</ul>
+				<table class="List_BJ">
+					<thead>
+						<tr>
+						<th>学生ID</th>
+						<th>姓名</th>
+						<th>班级</th>
+						<th>学号</th>
+						<th>标签</th>
+						<th>修改</th>
+						<th>删除</th>
+						</tr>
+					</thead>
                     
                     <?php foreach ($students as $student): ?>
-                    <ul>
-                        <li><?php echo htmlspecialchars($student['s_id']); ?></li>
-                        <li><?php echo htmlspecialchars($student['s_name']); ?></li>
-                        <li><?php echo htmlspecialchars($student['class_name']); ?></li>
-                        <li><?php echo htmlspecialchars($student['s_num']); ?></li>
-                        <li><?php echo htmlspecialchars($student['tags']); ?></li>
-                        <li><a href="#">修改</a></li>
-                        <li><a href="#">删除</a></li>
-                    </ul>
+                    <tbody>
+						<tr>
+                        <td><?php echo htmlspecialchars($student['s_id']); ?></td>
+                        <td><?php echo htmlspecialchars($student['s_name']); ?></td>
+                        <td><?php echo htmlspecialchars($student['class_name']); ?></td>
+                        <td><?php echo htmlspecialchars($student['s_num']); ?></td>
+                        <td><?php echo htmlspecialchars($student['tags']); ?></td>
+                        <td><a href="#">修改</a></td>
+                        <td><a href="#">删除</a></td>
+						</tr>
+                    </tbody>
                     <?php endforeach; ?>
-				</div>
+				</table>
 			</div>
 		</div>
 	</body>

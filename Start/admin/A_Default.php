@@ -1,7 +1,7 @@
 <?php
 // 更正相对路径
 $basePath = realpath(__DIR__ . '/../../');
-require_once $basePath . '/includes/header.php';
+require_once $basePath . '/config/header.php';
 ?>
 
 <!DOCTYPE html>

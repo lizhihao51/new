@@ -5,6 +5,8 @@
 	line-height: 1.5;
 }
 
+
+
 html {
 	margin: 0 auto;
 	min-width: 500px;
@@ -64,7 +66,7 @@ h3::before {
 
 h3 {
 	padding-bottom: 15px;
-	border-bottom: 1px solid #f0f0f0;
+	/* border-bottom: 1px solid #f0f0f0; */
 }
 
 .form-group {
@@ -119,7 +121,7 @@ h3 {
 	line-height: 38px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
-	border-bottom: solid 2px #116493;
+	border-bottom: solid 2px #116493 !important;
 	margin-top: 25px;
 	margin-bottom: 10px;
 }
@@ -153,6 +155,68 @@ ul .li_100{
 	width: 100px;
 }
 
-form{
+/* form{
 	margin: 30px;
+} */
+
+.tit4 li{
+	list-style-type: none;
+	float: left;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+
+.tit3, .tit4 {
+  display: flex;        /* 用 flex 替代 float */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom: solid 1px #116493;
+}
+.tit3 li, .tit4 li {
+  float: none;          /* 取消 float */
+  flex: 1;              /* 平均分配宽度，无需百分比 */
+  text-align: center;
+  word-break: break-all;
+  height: 50px;
+}
+
+li.id{
+	max-width: 60px;
+}
+li.time{
+	min-width: 200px;
+}
+
+td{
+	text-align: center;
+}
+
+/* 第一步：合并表格边框（必加） */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead th {
+  border-bottom: solid 2px #116493;
+  padding: 10px 0;
+}
+tbody td {
+  border-bottom: solid 1px #ddd;
+  padding: 10px 0;
+}
+
+/* 4. 奇数行（第1、3、5…行）样式 */
+tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255,0.5); /* 白色 */
+}
+/* 5. 偶数行（第2、4、6…行）样式 */
+tbody tr:nth-child(even) {
+  background-color: rgba(200, 200, 200, 0.2); /* 浅灰色，区分奇数行 */
+}
+/* 可选：行悬停高亮（提升交互） */
+tbody tr:hover {
+  background-color: rgb(255, 255, 255); /* 悬停浅蓝 */
 }

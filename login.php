@@ -18,10 +18,14 @@ if(isset($_COOKIE['admin'])){
         <div id="tit1">测试系统v2.0</div>
         <div id="login-form">
             <h2 class="form-title">用户登录</h2>
-            <?php if ($message) : ?>
-                <div style="color: red; text-align: center; margin: 10px 0;"><?php echo $message; ?></div>
-            <?php endif; ?>
-            <form method="POST" >
+            <?php 
+            // 显示错误消息
+            if (isset($_GET['msg'])) {
+                $message = urldecode($_GET['msg']);
+                echo '<div style="color: red; text-align: center; margin: 10px 0;">' . htmlspecialchars($message) . '</div>';
+            }
+            ?>
+            <form method="POST" action="config/cookies.php">
                 <div class="form-group">
                     <label for="username">用户名</label>
                     <input type="text" id="username" name="username" class="form-control" required>

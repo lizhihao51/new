@@ -1,0 +1,67 @@
+
+
+.class-tab {
+    padding: 8px 15px;
+    margin: 0 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.class-tab.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.search-input{
+    width: 60%;
+    padding: 10px 12px;
+    margin: 0 10px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* 宽高包含内边距/边框 */
+    font-size: 14px;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+.batch-status-select{
+    padding: 10px 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* 宽高包含内边距/边框 */
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+
+input[type="checkbox"] {
+
+  width: 18px;              /* 自定义多选框宽度 */
+  height: 18px;             /* 自定义多选框高度 */
+  border: 1px solid #dcdcdc;/* 边框颜色：浅灰 */
+  border-radius: 3px;       /* 轻微圆角，贴合UI风格 */
+  background: #fff;         /* 背景色：白色 */
+}
+
+/* 2. 选中状态样式 */
+input[type="checkbox"]:checked {
+  background: #1890ff;      /* 选中后背景色：蓝色（可替换为你的主题色） */
+  border-color: #1890ff;    /* 选中后边框色同步主题色 */
+}
+
+
+/* 4. 悬停状态（未选中时） */
+input[type="checkbox"]:hover:not(:checked):not(:disabled) {
+  border-color: #999;       /* 悬停边框变深灰 */
+}
+
+
+.status-select {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+}
