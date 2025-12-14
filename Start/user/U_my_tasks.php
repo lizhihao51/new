@@ -131,7 +131,7 @@ $statusMap = [
                                                target="_self">处理任务</a>
                                         <?php endif; ?>
                                         <!-- 导出记录按钮（所有状态都显示） -->
-                                        <a href="export_records.php?task_id=<?= $task['task_id'] ?>" 
+                                        <a href="export_all_records.php?task_id=<?= $task['task_id'] ?>" 
                                            class="btn btn-sm btn-info" 
                                            target="_self">导出记录</a>
                                     </td>
